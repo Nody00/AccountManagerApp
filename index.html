@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="manager">
+      <div class="main-nav">
+        <div>
+          <div class="logo-container">
+            <ion-icon name="globe-outline" class="logo"></ion-icon>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <ion-icon name="albums-outline" class="nav-icon"></ion-icon
+              ><a href="#" class="nav-btn">Dashboard</a>
+            </li>
+            <li>
+              <ion-icon name="document-text-outline" class="nav-icon"></ion-icon
+              ><a href="#" class="nav-btn">Overview</a>
+            </li>
+            <li>
+              <ion-icon name="help-outline" class="nav-icon"></ion-icon
+              ><a href="#" class="nav-btn">Information</a>
+            </li>
+            <li>
+              <ion-icon name="options-outline" class="nav-icon"></ion-icon
+              ><a href="#" class="nav-btn">Settings</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="logout-btn">Log Out</a>
+      </div>
+      <div class="search">
+        <div class="date-and-input-box">
+          <div class="current-date">12 Aug 2022,Tuesday</div>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="&#128269 Search your invoices"
+            class="search-input"
+          />
+        </div>
+        <div class="user-and-img-box">
+          <a href="#"><ion-icon name="chatbox-ellipses-outline" class="user-icons"></ion-icon>
+        </a>
+          <a href="#"><ion-icon name="notifications-outline" class="user-icons notification"></ion-icon>
+          </a>
+          <p class="user-name">MP111</p>
+          <div class="user-img-box">
+            <img src="./imgs/user-photo.jpg" alt="" class="user-img" />
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h3 class="heading-tertiary">Latest transactions</h3>
+        <div class="movement-info">
+          <p class="info-text">ID</p>
+          <p class="info-text">Date</p>
+          <p class="info-text">Amount</p>
+          <p class="info-text">Type</p>
+        </div>
+        <div class="movement-container">
+          <div class="movement">
+            <div class="movement-id">222</div>
+            <div class="movement-date">01/02/2022</div>
+            <div class="movement-amount">$200</div>
+            <div class="movement-type transfer">Transfer</div>
+          </div>
+          <div class="movement">
+            <div class="movement-id">222</div>
+            <div class="movement-date">01/02/2022</div>
+            <div class="movement-amount">$200</div>
+            <div class="movement-type expense">Expense</div>
+          </div>
+          <div class="movement">
+            <div class="movement-id">222</div>
+            <div class="movement-date">01/02/2022</div>
+            <div class="movement-amount">$200</div>
+            <div class="movement-type deposit">Deposit</div>
+          </div>
+          <div class="movement">
+            <div class="movement-id">222</div>
+            <div class="movement-date">01/02/2022</div>
+            <div class="movement-amount">$200</div>
+            <div class="movement-type deposit">Deposit</div>
+          </div>
+          <div class="movement">
+            <div class="movement-id">222</div>
+            <div class="movement-date">01/02/2022</div>
+            <div class="movement-amount">$200</div>
+            <div class="movement-type deposit">Deposit</div>
+          </div>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="user-card">
+          <p class="card-title">Your info</p>
+          <p class="card-name">Max Powerton</p>
+          <div class="card-text-box"><p class="user-info-type">ID:</p><p class="user-id">124124</p></div>
+          <div class="card-text-box"><p class="user-info-type">Address:</p><address>Cecilia Chapman</br>
+            711-2880 Nulla St.</br>
+            Mankato Mississippi 96522
+            </address>
+          </div>
+          <div class="card-text-box"><p class="user-info-type">Email:</p><p class="email">maxpower11@gmail.com</p>
+          </div>
+          <div class="card-text-box"><p class="user-info-type">Phone number:</p><p class="phone-number">(257) 563-7401</p>
+          </div>
+        </div>
+        <div class="balance-box">
+        <div class="balance-flex">
+          <p class="balance-text">Account balance:</p>
+          <p class="balance">$8585</p>
+        </div>
+        <div class="balance-flex">
+          <p class="balance-text">Account credit limit:</p>
+          <p class="balance">$100000</p>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="#" class="new-btn">&plus; New transaction</a>
+      </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

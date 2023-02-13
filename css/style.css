@@ -1,0 +1,360 @@
+.manager {
+  max-width: 120rem;
+  margin: 10rem auto;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto 60fr 40fr;
+  grid-template-rows: auto 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ***************** */
+/* MAIN NAV STYLING */
+/* *************** */
+
+.main-nav {
+  height: 70rem;
+  border-right: 2px solid #eee;
+  grid-row: span 2;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  align-items: center;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.nav-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.nav-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  color: #1864ab;
+}
+
+.nav-btn:link,
+.nav-btn:visited {
+  text-decoration: none;
+  color: #333;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-radius: 9px;
+}
+.nav-btn:active,
+.nav-btn:hover {
+  background-color: #d1e0ee;
+}
+
+.logout-btn:link,
+.logout-btn:visited {
+  text-decoration: none;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-radius: 9px;
+  background-color: #1864ab;
+}
+
+.logout-btn:hover,
+.logout-btn:active {
+  padding: 1.2rem 3.2rem;
+}
+
+/* ***************** */
+/* SEARCH STYLING */
+/* *************** */
+
+.search {
+  padding: 2.4rem 2.4rem;
+  /* border-bottom: 2px solid #eee; */
+  grid-column: span 2/-1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date-and-input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.current-date {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.search-input {
+  padding: 1rem;
+  padding-right: 8rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  border-radius: 9px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  outline: none;
+  transition: all 0.3s;
+}
+.search-input:focus {
+  padding-right: 10rem;
+  background-color: #d1e0ee;
+}
+
+.user-and-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+.user-img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.user-icons {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+}
+.notification::after {
+  content: "";
+  padding: 0.4rem;
+  border-radius: 100px;
+  background-color: red;
+  position: absolute;
+  top: 2px;
+  left: 12px;
+}
+
+.user-and-img-box a:link,
+.user-and-img-box a:visited {
+  color: #333;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.2s;
+  border-radius: 100px;
+}
+
+.user-and-img-box a:hover,
+.user-and-img-box a:active {
+  color: #333;
+  text-decoration: none;
+  background-color: #ddd;
+}
+/* ***************** */
+/* CONTENT STYLING */
+/* *************** */
+
+.content {
+  /* border-top: 1px solid black; */
+  grid-column: 2;
+  padding: 2.4rem;
+}
+
+.movement-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  border-radius: 9px;
+  background-color: #ddd;
+  margin-bottom: 2.4rem;
+}
+
+.info-text {
+  border-right: 1px solid black;
+  padding-right: 4.8rem;
+}
+
+.info-text:last-child {
+  border: none;
+  padding-right: 3.2rem;
+}
+
+.movement-container {
+  overflow: scroll;
+  padding: 1.2rem;
+  height: 45rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.movement-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.movement-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.movement {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.2rem;
+  border-radius: 9px;
+  color: #333;
+  margin-bottom: 2.4rem;
+  border: 1px solid #eee;
+  box-shadow: 0rem 1.2rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.movement div {
+  border-right: 1px solid #fff;
+  padding-right: 4.8rem;
+}
+
+.movement div:last-child {
+  border: none;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.transfer {
+  color: #1864ab;
+}
+
+.expense {
+  color: red;
+}
+
+.deposit {
+  color: #37b24d;
+}
+
+/* ***************** */
+/* CONTENT STYLING */
+/* *************** */
+
+.user-info {
+  /* border: 1px solid black; */
+  padding: 1.2rem;
+}
+
+.user-card {
+  padding: 2.4rem;
+  color: #fff;
+  background-color: #2f74b3;
+  border-radius: 9px;
+  margin-bottom: 2.4rem;
+}
+
+.card-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.card-name {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 4px dotted #fff;
+}
+.card-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+  text-align: right;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.card-text-box:last-child {
+  margin: 0;
+}
+
+.balance-box {
+  padding: 2.4rem;
+  border: 1px solid #1864ab;
+
+  border-radius: 9px;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.balance-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.balance-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.balance {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #37b24d;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-btn:link,
+.new-btn:visited {
+  text-decoration: none;
+  color: #fff;
+  padding: 2rem 2.4rem;
+  background-color: #1864ab;
+  font-size: 1.8rem;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+.new-btn:hover,
+.new-btn:active {
+  padding: 2rem 4.8rem;
+}
