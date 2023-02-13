@@ -9,6 +9,8 @@
   grid-template-rows: auto 1fr;
   border-radius: 12px;
   overflow: hidden;
+  transform: translateX(0%);
+  transition: all 1s;
 }
 
 /* ***************** */
@@ -357,4 +359,11 @@
 .new-btn:hover,
 .new-btn:active {
   padding: 2rem 4.8rem;
+}
+
+.hidden {
+  transform: translateX(150%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
