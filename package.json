@@ -1,0 +1,26 @@
+{
+  "name": "accountapp",
+  "version": "1.0.0",
+  "description": "Account managing app ",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nody00/AccountManagerApp.git"
+  },
+  "author": "Dino Krcic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nody00/AccountManagerApp/issues"
+  },
+  "homepage": "https://github.com/Nody00/AccountManagerApp#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.2.1"
+  }
+}

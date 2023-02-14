@@ -13,10 +13,18 @@
     />
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script defer src="./js/script.js"></script>
+    <script defe
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+    defer
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer type="module" src="./js/script.js"></script>
   </head>
   <body>
-    <div class="manager hidden">
+    <div class="manager">
       <div class="main-nav">
         <div>
           <div class="logo-container">
@@ -65,7 +73,20 @@
           </div>
         </div>
       </div>
-      <div class="content">
+
+      <!-- OVERVIEW WITH CHARTS -->
+
+      <div class="overview">
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+
+      </div>
+
+      <!--  -->
+
+      <!-- CONTENT -->
+      <div class="content hidden-ty">
         <h3 class="heading-tertiary">Latest transactions</h3>
         <div class="movement-info">
           <p class="info-text">ID</p>
@@ -106,7 +127,9 @@
           </div>
         </div>
       </div>
-      <div class="user-info">
+
+      <!-- USER INFO -->
+      <div class="user-info hidden-ty">
         <div class="user-card">
           <p class="card-title">Your info</p>
           <p class="card-name">Max Powerton</p>
@@ -136,13 +159,41 @@
       </div>
       </div>
     </div>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+
+    <!-- MODAL WINDOW -->
+    <div class="overlay hidden-ty">
+      <div class="modal">
+        <div class="modal-title heading-tertiary">Add new transaction</div>
+        <form action="#" class="modal-form">
+          <label for="amount">Amount:</label>
+          <input id="amount" type="number" placeholder="$100" required/>
+          <label for="type">Type:</label>
+          <select id="type">
+            <option value="transfer">Transfer</option>
+            <option value="deposit">Deposit</option>
+            <option value="expense">Expense</option>
+          </select>
+        </form>
+        <a href="#" class="btn-close-modal"><ion-icon name="close-outline" class="modal-icon"></ion-icon></a>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </div>
+
+    <!-- LOG IN PAGE -->
+    
+    <div class="log-in-container hidden-ty">
+      <div class="login">
+      <h3 class="heading-tertiary">Log in:</h3>
+      <form action="#" class="log-in-form">
+        <label for="username">Username</label>
+        <input id="username" type="text" required placeholder="dk999">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required/ placeholder="password">
+        <button type="submit" class="submit-btn">Log In</button>
+      </form>
+    </div>
+    </div>
+
+    
   </body>
 </html>

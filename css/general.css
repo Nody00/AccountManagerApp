@@ -68,13 +68,14 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vh;
   background-image: linear-gradient(
     90deg,
     rgba(116, 162, 205, 1) 31%,
     rgba(140, 178, 213, 1) 94%
   );
+  position: relative;
 }
 
 .container {
@@ -169,7 +170,7 @@ body {
   margin-right: 1.2rem;
 }
 .margin-md-bottom {
-  margin-bottom: 2.4rem;
+  margin-bottom: 5rem;
 }
 .margin-md-top {
   margin-top: 4.8rem;
