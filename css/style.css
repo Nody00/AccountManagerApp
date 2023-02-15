@@ -190,6 +190,9 @@
   /* border-top: 1px solid black; */
   grid-column: 2;
   padding: 2.4rem;
+  transform: translateY(0%);
+
+  transition: all 1s;
 }
 
 .movement-info {
@@ -361,14 +364,6 @@
   padding: 2rem 4.8rem;
 }
 
-.hidden-tx {
-  transform: translateX(150%);
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  display: none;
-}
-
 /* ***************** */
 /* MODAL STYLING */
 /* *************** */
@@ -382,13 +377,6 @@
   top: 0;
   transform: translateY(0%);
   transition: all 1s;
-}
-.hidden-ty {
-  transform: translateY(150%);
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  display: none;
 }
 
 .modal {
@@ -461,7 +449,7 @@
   position: absolute;
   top: 0;
   transform: translateY(0%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .login {
@@ -512,6 +500,16 @@
   width: 100%;
   transition: all 0.2s;
   cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+.error-login {
+  padding: 1.2rem 2.4rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #e03131;
+  border-radius: 9px;
+  width: 100%;
 }
 
 .submit-btn:hover,
@@ -519,13 +517,27 @@
   background-color: #165a9a;
 }
 
-/* experiment */
-
-/* .overview {
-  grid-column: span 2;
-} */
+/* ***************** */
+/* OVERVIEW STYLING */
+/* *************** */
 
 .chart-container {
   width: 100%;
   padding: 2.4rem;
+}
+
+.hidden-tx {
+  transform: translateX(150%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  display: none;
+}
+
+.hidden-ty {
+  transform: translateY(150%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  display: none;
 }

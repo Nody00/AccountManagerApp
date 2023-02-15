@@ -13,19 +13,19 @@
     />
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script defe
+    <script type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
-    defer
+    type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script defer type="module" src="./js/script.js"></script>
+    <!-- <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script type="module" src="./js/Controller.js"></script>
   </head>
   <body>
-    <div class="manager">
-      <div class="main-nav">
+    <div class="manager hidden-tx">
+      <!-- <div class="main-nav">
         <div>
           <div class="logo-container">
             <ion-icon name="globe-outline" class="logo"></ion-icon>
@@ -69,25 +69,26 @@
           </a>
           <p class="user-name">MP111</p>
           <div class="user-img-box">
-            <img src="./imgs/user-photo.jpg" alt="" class="user-img" />
+            <img src="./imgs/user-photo-1.jpg" alt="" class="user-img" />
           </div>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
       <!-- OVERVIEW WITH CHARTS -->
 
-      <div class="overview">
+      <div class="overview hidden-ty">
         <div class="chart-container">
           <canvas id="myChart"></canvas>
         </div>
-
       </div>
 
-      <!--  -->
+    
+     
+
 
       <!-- CONTENT -->
       <div class="content hidden-ty">
-        <h3 class="heading-tertiary">Latest transactions</h3>
+        <!-- <h3 class="heading-tertiary">Latest transactions</h3>
         <div class="movement-info">
           <p class="info-text">ID</p>
           <p class="info-text">Date</p>
@@ -125,7 +126,7 @@
             <div class="movement-amount">$200</div>
             <div class="movement-type deposit">Deposit</div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- USER INFO -->
@@ -173,6 +174,8 @@
             <option value="deposit">Deposit</option>
             <option value="expense">Expense</option>
           </select>
+          <label for="date">Date:</label>
+          <input type="date"/>
         </form>
         <a href="#" class="btn-close-modal"><ion-icon name="close-outline" class="modal-icon"></ion-icon></a>
         <button type="submit" class="submit-btn">Submit</button>
@@ -181,15 +184,16 @@
 
     <!-- LOG IN PAGE -->
     
-    <div class="log-in-container hidden-ty">
+    <div class="log-in-container">
       <div class="login">
       <h3 class="heading-tertiary">Log in:</h3>
       <form action="#" class="log-in-form">
         <label for="username">Username</label>
-        <input id="username" type="text" required placeholder="dk999">
+        <input id="username" value="dk999" class="input-username" type="text" required placeholder="dk999" name="username">
         <label for="password">Password:</label>
-        <input type="password" id="password" required/ placeholder="password">
+        <input type="password" value="password" class="input-password" id="password" required/ placeholder="password" name="password">
         <button type="submit" class="submit-btn">Log In</button>
+        <div class="error-container"></div>
       </form>
     </div>
     </div>
