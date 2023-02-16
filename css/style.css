@@ -263,7 +263,7 @@
 }
 
 .expense {
-  color: #e03131;
+  color: #e03131 !important;
 }
 
 .deposit {

@@ -8,16 +8,29 @@ class ContentView {
     this._parentElement.classList.add("hidden-ty");
   }
   _generateMovements() {
-    return this._data.movements.forEach(
-      (mov) => `
-    <div class="movement">
-      <div class="movement-id">${mov.id}</div>
-      <div class="movement-date">${mov.date}</div>
-      <div class="movement-amount">${mov.amount}</div>
-      <div class="movement-type transfer">${mov.type}}</div>
-    </div>`
-    );
+    let html = "";
+    this._data.movements.forEach(function (mov) {
+      const day = mov.date.toLocaleString("en-US", {
+        day: "2-digit",
+      });
+      const month = mov.date.toLocaleString("en-US", {
+        month: "2-digit",
+      });
+      const year = mov.date.getFullYear();
+
+      html += `
+      <div class="movement">
+        <div class="movement-id">${mov.id}</div>
+        <div class="movement-date">${day}/${month}/${year}</div>
+        <div class="movement-amount">$${mov.amount}</div>
+        <div class="movement-type ${
+          mov.type
+        }">${mov.type[0].toUpperCase()}${mov.type.slice(1)}</div>
+      </div>`;
+    });
+    return html;
   }
+
   _generateMarkup() {
     return `
     <h3 class="heading-tertiary">Latest transactions</h3>
@@ -35,8 +48,12 @@ class ContentView {
   render(data) {
     this._data = data;
     const markup = this._generateMarkup();
+    // const movementsMarkup = this._generateMovements();
+    this._parentElement.innerHTML = "";
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    console.log(data);
+    // const movementsContainer = document.querySelector(".movement-container");
+    // movementsContainer.innerHTML = "";
+    // movementsContainer.insertAdjacentHTML("afterbegin", movementsMarkup);
   }
 }
 

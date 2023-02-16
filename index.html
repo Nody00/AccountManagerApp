@@ -13,11 +13,12 @@
     />
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script type="module"
+    <script
+      type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
-    type="module"
+      type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
@@ -25,8 +26,10 @@
   </head>
   <body>
     <div class="manager hidden-tx">
-      <!-- <div class="main-nav">
-        <div>
+      <!-- MAIN NAV -->
+
+      <div class="main-nav">
+        <!-- <div>
           <div class="logo-container">
             <ion-icon name="globe-outline" class="logo"></ion-icon>
           </div>
@@ -49,10 +52,12 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="logout-btn">Log Out</a>
+        <a href="#" class="logout-btn">Log Out</a> -->
       </div>
+
+      <!-- SEARCH -->
       <div class="search">
-        <div class="date-and-input-box">
+        <!-- <div class="date-and-input-box">
           <div class="current-date">12 Aug 2022,Tuesday</div>
           <input
             type="text"
@@ -71,8 +76,8 @@
           <div class="user-img-box">
             <img src="./imgs/user-photo-1.jpg" alt="" class="user-img" />
           </div>
-        </div> -->
-      <!-- </div> -->
+        </div>  -->
+      </div>
 
       <!-- OVERVIEW WITH CHARTS -->
 
@@ -81,10 +86,6 @@
           <canvas id="myChart"></canvas>
         </div>
       </div>
-
-    
-     
-
 
       <!-- CONTENT -->
       <div class="content hidden-ty">
@@ -131,7 +132,7 @@
 
       <!-- USER INFO -->
       <div class="user-info hidden-ty">
-        <div class="user-card">
+        <!-- <div class="user-card">
           <p class="card-title">Your info</p>
           <p class="card-name">Max Powerton</p>
           <div class="card-text-box"><p class="user-info-type">ID:</p><p class="user-id">124124</p></div>
@@ -154,10 +155,10 @@
           <p class="balance-text">Account credit limit:</p>
           <p class="balance">$100000</p>
         </div>
-      </div>
-      <div class="btn-box">
-        <a href="#" class="new-btn">&plus; New transaction</a>
-      </div>
+      </div> -->
+        <!-- <div class="btn-box">
+          <a href="#" class="new-btn">&plus; New transaction</a>
+        </div> -->
       </div>
     </div>
 
@@ -167,7 +168,7 @@
         <div class="modal-title heading-tertiary">Add new transaction</div>
         <form action="#" class="modal-form">
           <label for="amount">Amount:</label>
-          <input id="amount" type="number" placeholder="$100" required/>
+          <input id="amount" type="number" placeholder="$100" required />
           <label for="type">Type:</label>
           <select id="type">
             <option value="transfer">Transfer</option>
@@ -175,29 +176,38 @@
             <option value="expense">Expense</option>
           </select>
           <label for="date">Date:</label>
-          <input type="date"/>
+          <input type="date" />
         </form>
-        <a href="#" class="btn-close-modal"><ion-icon name="close-outline" class="modal-icon"></ion-icon></a>
+        <a href="#" class="btn-close-modal"
+          ><ion-icon name="close-outline" class="modal-icon"></ion-icon
+        ></a>
         <button type="submit" class="submit-btn">Submit</button>
       </div>
     </div>
 
     <!-- LOG IN PAGE -->
-    
+
     <div class="log-in-container">
       <div class="login">
-      <h3 class="heading-tertiary">Log in:</h3>
-      <form action="#" class="log-in-form">
-        <label for="username">Username</label>
-        <input id="username" value="dk999" class="input-username" type="text" required placeholder="dk999" name="username">
-        <label for="password">Password:</label>
-        <input type="password" value="password" class="input-password" id="password" required/ placeholder="password" name="password">
-        <button type="submit" class="submit-btn">Log In</button>
-        <div class="error-container"></div>
-      </form>
+        <h3 class="heading-tertiary">Log in:</h3>
+        <form action="#" class="log-in-form">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            value="dk999"
+            class="input-username"
+            type="text"
+            required
+            placeholder="dk999"
+            name="username"
+          />
+          <label for="password">Password:</label>
+          <input type="password" value="password" class="input-password"
+          id="password" required/ placeholder="password" name="password">
+          <button type="submit" class="submit-btn">Log In</button>
+          <div class="error-container"></div>
+        </form>
+      </div>
     </div>
-    </div>
-
-    
   </body>
 </html>
