@@ -32,10 +32,51 @@ function handleFormData(data) {
   UserInfoView.render(model.curAccount);
 
   // Add event listener for logout
-  const btn = document.querySelector(".logout-btn");
-  btn.addEventListener("click", (e) => {
+  const btnLogout = document.querySelector(".logout-btn");
+  btnLogout.addEventListener("click", (e) => {
     e.preventDefault();
     handleLogOut();
+  });
+
+  // Add event listener for new transaction
+  const btnNewTr = document.querySelector(".new-btn");
+  btnNewTr.addEventListener("click", (e) => {
+    e.preventDefault();
+    showNewTrModal();
+  });
+}
+
+function showNewTrModal() {
+  // Show the modal form
+  const overlay = document.querySelector(".overlay");
+  overlay.classList.remove("hidden-ty");
+
+  // Hide modal form on button click
+  const btnCloseModal = document.querySelector(".btn-close-modal");
+  btnCloseModal.addEventListener("click", () => {
+    overlay.classList.add("hidden-ty");
+  });
+
+  // Hide modal on Esc
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") overlay.classList.add("hidden-ty");
+  });
+
+  // Listen for submit
+  const modalForm = document.querySelector(".modal-form");
+  modalForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formDataArr = [...new FormData(modalForm)];
+    const formData = Object.fromEntries(formDataArr);
+    model.addNewExpense(formData);
+
+    // Rerender the content view with expenses
+    ContentView.render(model.curAccount);
+    // Rerender the user info
+    UserInfoView.render(model.curAccount);
+
+    // Hide modal
+    overlay.classList.add("hidden-ty");
   });
 }
 

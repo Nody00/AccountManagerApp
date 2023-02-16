@@ -21,7 +21,11 @@ class SearchView {
     </a>
     <p class="user-name">${this._data.username}</p>
     <div class="user-img-box">
-      <img src="user-photo-1.fe375944.jpg" alt="" class="user-img" />
+      <img src=${
+        this._data.username === "dk999"
+          ? "user-img-dk999.8c2d4905.jpg"
+          : "user-img-js111.04cb9b52.jpg"
+      } alt="" class="user-img" />
     </div>
   </div>`;
   }

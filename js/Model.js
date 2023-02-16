@@ -105,9 +105,45 @@ export function setCurrentAccount(data) {
   );
   if (!account) return;
   curAccount = account;
+
+  // Getting the movements from local storage
+  const movementsLocal = localStorage.getItem(curAccount.username);
+  let movementsData;
+  if (movementsLocal) {
+    movementsData = JSON.parse(movementsLocal);
+  } else {
+    // if the local storage is empty set it to default movements
+    movementsData = curAccount.movements;
+  }
+
+  // Fixing the date format
+  movementsData.forEach((mov) => {
+    mov.date = new Date(mov.date);
+  });
+  console.log(movementsData);
+  console.log(curAccount.movements);
+  curAccount.movements = movementsData;
   return true;
 }
 
 export function resetCurrentAccount() {
   curAccount = "";
+}
+
+export function addNewExpense(newFormData) {
+  const newExpense = {
+    id: Math.floor(Math.random() * 999),
+    type: newFormData.type,
+    date: new Date(newFormData.date),
+    amount: +newFormData.amount,
+  };
+  curAccount.movements.push(newExpense);
+  setLocalStorage();
+}
+
+function setLocalStorage() {
+  localStorage.setItem(
+    curAccount.username,
+    JSON.stringify(curAccount.movements)
+  );
 }

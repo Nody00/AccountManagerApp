@@ -168,20 +168,27 @@
         <div class="modal-title heading-tertiary">Add new transaction</div>
         <form action="#" class="modal-form">
           <label for="amount">Amount:</label>
-          <input id="amount" type="number" placeholder="$100" required />
+          <input
+            id="amount"
+            type="number"
+            placeholder="$100"
+            name="amount"
+            required
+          />
           <label for="type">Type:</label>
-          <select id="type">
+          <select id="type" required name="type">
+            <option value="">Please select type</option>
             <option value="transfer">Transfer</option>
             <option value="deposit">Deposit</option>
             <option value="expense">Expense</option>
           </select>
           <label for="date">Date:</label>
-          <input type="date" />
+          <input type="date" required name="date" />
+          <button type="submit" class="submit-btn">Submit</button>
         </form>
         <a href="#" class="btn-close-modal"
           ><ion-icon name="close-outline" class="modal-icon"></ion-icon
         ></a>
-        <button type="submit" class="submit-btn">Submit</button>
       </div>
     </div>
 
@@ -209,5 +216,7 @@
         </form>
       </div>
     </div>
+    <!-- <img src="./imgs/user-img-js111.jpg" alt="" />
+    <img src="./imgs/user-img-dk999.jpg" alt="" /> -->
   </body>
 </html>

@@ -47,7 +47,10 @@ class UserInfoView {
     <p class="balance-text">Account credit limit:</p>
     <p class="balance">$${this._data.credit}</p>
   </div>
-</div>`;
+</div>
+<div class="btn-box">
+          <a href="#" class="new-btn">&plus; New transaction</a>
+        </div>`;
   }
   render(data) {
     this._data = data;
