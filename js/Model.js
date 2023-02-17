@@ -120,8 +120,7 @@ export function setCurrentAccount(data) {
   movementsData.forEach((mov) => {
     mov.date = new Date(mov.date);
   });
-  console.log(movementsData);
-  console.log(curAccount.movements);
+
   curAccount.movements = movementsData;
   return true;
 }

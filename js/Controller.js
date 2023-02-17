@@ -1,11 +1,12 @@
-import ChartView from "./Views/ChartView";
 import ManagerView from "./Views/ManagerView";
 import NavView from "./Views/NavView";
 import SearchView from "./Views/SearchView";
 import LoginView from "./Views/LoginView";
 import ContentView from "./Views/ContentView";
 import UserInfoView from "./Views/UserInfoView";
+import ChartView from "./Views/ChartView";
 import * as model from "./Model";
+import { Chart } from "chart.js";
 
 // Rendering the chart
 // ChartView();
@@ -30,6 +31,10 @@ function handleFormData(data) {
   //   Show user-info
   UserInfoView.showUserInfoView();
   UserInfoView.render(model.curAccount);
+
+  // Render the chart but dont show it
+  ChartView.calculateChartData(model.curAccount);
+  ChartView.render();
 
   // Add event listener for logout
   const btnLogout = document.querySelector(".logout-btn");
@@ -74,9 +79,20 @@ function showNewTrModal() {
     ContentView.render(model.curAccount);
     // Rerender the user info
     UserInfoView.render(model.curAccount);
-
+    // Adding the event listener again since we rerendered the userinfo view
+    const btnNewTr = document.querySelector(".new-btn");
+    btnNewTr.addEventListener("click", (e) => {
+      e.preventDefault();
+      showNewTrModal();
+    });
+    // Rerender the overview chart
+    ChartView.updateChart();
+    ChartView.calculateChartData(model.curAccount);
+    ChartView.render();
     // Hide modal
     overlay.classList.add("hidden-ty");
+    // Clear inputs
+    clearModalInputs();
   });
 }
 
@@ -87,11 +103,44 @@ function handleLogOut() {
   UserInfoView.hideUserInfoView();
   ContentView.hideContentView();
   LoginView.showLoginView();
+  ChartView.hideOverview();
+  ChartView.updateChart();
   model.resetCurrentAccount();
+}
+
+function handleContentChange(data) {
+  // Changing the main content to the overview component
+  if (data.classList.contains("btn-overview")) {
+    // Hiding the content and user views
+    ContentView.hideContentView();
+
+    // Rendering the overview view
+    ChartView.showOverview();
+  }
+  if (data.classList.contains("btn-dashboard")) {
+    // Hiding other content
+    ChartView.hideOverview();
+
+    // Rendering the dashboard
+    ContentView.showContentView();
+  }
 }
 
 function init() {
   LoginView.addHandlerSubmit(handleFormData);
+  NavView.addHandlerNav(handleContentChange);
 }
 
 init();
+
+// Clear modal inputs on submit
+
+function clearModalInputs() {
+  const inputAmount = document.querySelector(".input-amount");
+  const inputType = document.querySelector(".input-type");
+  const inputDate = document.querySelector(".input-date");
+
+  inputAmount.value = "";
+  inputType.value = "";
+  inputDate.value = "";
+}

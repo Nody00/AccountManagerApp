@@ -10,19 +10,19 @@ class NavView {
     <ul class="nav-list">
       <li>
         <ion-icon name="albums-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn">Dashboard</a>
+        ><a href="#" class="nav-btn btn-dashboard">Dashboard</a>
       </li>
       <li>
         <ion-icon name="document-text-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn">Overview</a>
+        ><a href="#" class="nav-btn btn-overview">Overview</a>
       </li>
       <li>
         <ion-icon name="help-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn">Information</a>
+        ><a href="#" class="nav-btn btn-info">Information</a>
       </li>
       <li>
         <ion-icon name="options-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn">Settings</a>
+        ><a href="#" class="nav-btn btn-settings">Settings</a>
       </li>
     </ul>
 </div>
@@ -33,6 +33,11 @@ class NavView {
     const markup = this._generateMarkup();
     this._parentElement.innerHTML = "";
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
+  }
+  addHandlerNav(handler) {
+    this._parentElement.addEventListener("click", (e) => {
+      handler(e.target);
+    });
   }
 }
 
