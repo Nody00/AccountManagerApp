@@ -11,6 +11,7 @@
   overflow: hidden;
   transform: translateX(0%);
   transition: all 1s;
+  height: 72rem;
 }
 
 /* ***************** */
@@ -190,8 +191,7 @@
   /* border-top: 1px solid black; */
   grid-column: 2;
   padding: 2.4rem;
-  transform: translateY(0%);
-
+  transform: translateY(-98%);
   transition: all 1s;
 }
 
@@ -277,6 +277,8 @@
 .user-info {
   /* border: 1px solid black; */
   padding: 1.2rem;
+  transform: translateY(-95%);
+  transition: all 1s;
 }
 
 .user-card {
@@ -376,7 +378,7 @@
   position: absolute;
   top: 0;
   transform: translateY(0%);
-  transition: all 1s;
+  transition: all 0.2s;
 }
 
 .modal {
@@ -443,7 +445,7 @@
 /* *************** */
 
 .log-in-container {
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(100px);
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -521,23 +523,38 @@
 /* OVERVIEW STYLING */
 /* *************** */
 
+.overview {
+  transform: translateY(0%);
+  transition: all 1s;
+}
+
 .chart-container {
   width: 100%;
   padding: 2.4rem;
+
+  transform: translateY(0%);
+  transition: all 1s;
 }
 
 .hidden-tx {
-  transform: translateX(150%);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  display: none;
+  transform: translateX(150%);
+  /* display: none; */
 }
 
 .hidden-ty {
-  transform: translateY(150%);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  display: none;
+  transform: translateY(150%);
+  /* display: none; */
+}
+.hidden-ty-chart {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateY(-150%);
+  /* display: none; */
 }

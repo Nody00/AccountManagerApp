@@ -7,10 +7,10 @@ class ChartView {
   deposits;
   transfers;
   showOverview() {
-    this._container.classList.remove("hidden-ty");
+    this._container.classList.remove("hidden-ty-chart");
   }
   hideOverview() {
-    this._container.classList.add("hidden-ty");
+    this._container.classList.add("hidden-ty-chart");
   }
 
   calculateChartData(curAccount) {

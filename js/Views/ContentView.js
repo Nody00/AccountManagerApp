@@ -25,9 +25,10 @@ class ContentView {
         <div class="movement-amount">$${mov.amount}</div>
         <div class="movement-type ${
           mov.type
-        }">${mov.type[0].toUpperCase()}${mov.type.slice(1)}</div>
+        }">${mov.type[0]?.toUpperCase()}${mov.type.slice(1)}</div>
       </div>`;
     });
+
     return html;
   }
 
