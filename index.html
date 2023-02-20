@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account manager</title>
+    <meta
+      name="description"
+      content="Advent Banking offers a robust,safe and capable account management software."
+    />
+    <title>Account Management &mdash; Safe Banking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon.ico" />
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -25,11 +32,12 @@
     <script type="module" src="./js/Controller.js"></script>
   </head>
   <body>
-    <div class="manager hidden-tx">
-      <!-- MAIN NAV -->
+    <div class="container">
+      <div class="manager hidden-tx">
+        <!-- MAIN NAV -->
 
-      <div class="main-nav">
-        <!-- <div>
+        <div class="main-nav">
+          <!-- <div>
           <div class="logo-container">
             <ion-icon name="globe-outline" class="logo"></ion-icon>
           </div>
@@ -53,11 +61,11 @@
           </ul>
         </div>
         <a href="#" class="logout-btn">Log Out</a> -->
-      </div>
+        </div>
 
-      <!-- SEARCH -->
-      <div class="search">
-        <!-- <div class="date-and-input-box">
+        <!-- SEARCH -->
+        <div class="search">
+          <!-- <div class="date-and-input-box">
           <div class="current-date">12 Aug 2022,Tuesday</div>
           <input
             type="text"
@@ -77,19 +85,23 @@
             <img src="./imgs/user-photo-1.jpg" alt="" class="user-img" />
           </div>
         </div>  -->
-      </div>
-
-      <!-- OVERVIEW WITH CHARTS -->
-
-      <div class="overview hidden-ty-chart">
-        <div class="chart-container">
-          <canvas id="myChart"></canvas>
         </div>
-      </div>
 
-      <!-- CONTENT -->
-      <div class="content hidden-ty">
-        <!-- <h3 class="heading-tertiary">Latest transactions</h3>
+        <!-- OVERVIEW WITH CHARTS -->
+
+        <div class="overview hidden-ty-chart">
+          <div class="chart-container">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+
+        <!-- <div class="information hidden-ty-chart">
+          <h3 class="heading-tertiary">Latest transactions</h3>
+        </div> -->
+
+        <!-- CONTENT -->
+        <div class="content hidden-ty">
+          <!-- <h3 class="heading-tertiary">Latest transactions</h3>
         <div class="movement-info">
           <p class="info-text">ID</p>
           <p class="info-text">Date</p>
@@ -128,11 +140,11 @@
             <div class="movement-type deposit">Deposit</div>
           </div>
         </div> -->
-      </div>
+        </div>
 
-      <!-- USER INFO -->
-      <div class="user-info hidden-ty">
-        <!-- <div class="user-card">
+        <!-- USER INFO -->
+        <div class="user-info hidden-ty">
+          <!-- <div class="user-card">
           <p class="card-title">Your info</p>
           <p class="card-name">Max Powerton</p>
           <div class="card-text-box"><p class="user-info-type">ID:</p><p class="user-id">124124</p></div>
@@ -156,9 +168,10 @@
           <p class="balance">$100000</p>
         </div>
       </div> -->
-        <!-- <div class="btn-box">
+          <!-- <div class="btn-box">
           <a href="#" class="new-btn">&plus; New transaction</a>
         </div> -->
+        </div>
       </div>
     </div>
 

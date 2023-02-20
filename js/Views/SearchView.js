@@ -3,9 +3,24 @@ class SearchView {
   _data;
 
   _generateMarkup() {
+    const week = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thrusday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ];
+    const today = new Date();
+    const day = today.toLocaleDateString("en-US", { day: "2-digit" });
+    const month = today.toLocaleString("en-US", { month: "short" });
+    const year = today.getFullYear().toString();
+    // const dayFull = week[today.getDay() - 1];
+
     return `
 <div class="date-and-input-box">
-    <div class="current-date">12 Aug 2022,Tuesday</div>
+    <div class="current-date">${day} ${month} ${year}</div>
     <input
       type="text"
       name=""

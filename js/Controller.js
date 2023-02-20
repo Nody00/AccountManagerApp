@@ -8,9 +8,6 @@ import ChartView from "./Views/ChartView";
 import * as model from "./Model";
 import { Chart } from "chart.js";
 
-// Rendering the chart
-// ChartView();
-
 function handleFormData(data) {
   //    Account data check
   if (!model.setCurrentAccount(data)) {

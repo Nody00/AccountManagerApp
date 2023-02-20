@@ -1,0 +1,31 @@
+/* ################# */
+/* Under 1152 pixels */
+/* ################# */
+
+@media (max-width: 72em) {
+  html {
+    font-size: 56.25%;
+  }
+  .manager {
+    /* height: 60rem; */
+    grid-template-columns: 20fr 80fr;
+    grid-template-rows: auto auto auto;
+    overflow: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .manager::-webkit-scrollbar {
+    display: none;
+  }
+  .content {
+    transform: translateY(-110%);
+  }
+
+  .user-info {
+    transform: translateY(-100%);
+    grid-row: 4;
+    grid-column: 2;
+    padding: 6.4rem;
+  }
+}
