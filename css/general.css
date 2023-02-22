@@ -76,6 +76,7 @@ body {
     rgba(140, 178, 213, 1) 94%
   );
   position: relative;
+  transition: all 1s;
 }
 
 .container {
@@ -172,6 +173,10 @@ body {
 .margin-md-bottom {
   margin-bottom: 5rem;
 }
+
 .margin-md-top {
   margin-top: 4.8rem;
+}
+.margin-sm-top {
+  margin-top: 4.1rem;
 }

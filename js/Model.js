@@ -1,10 +1,12 @@
+import { Random } from "random-js";
+const randomAccounts = new Random();
 export const state = {
   accounts: [
     {
       username: "dk999",
       password: "password",
       fullName: "Dino Krcic",
-      id: Math.floor(Math.random() * 999),
+      id: randomAccounts.integer(1, 999),
       address: {
         street: "Nulla St. 711-2880",
         city: "Mankato Mississippi 96522",
@@ -61,7 +63,7 @@ export const state = {
       username: "js111",
       password: "password",
       fullName: "John Smith",
-      id: Math.floor(Math.random() * 999),
+      id: randomAccounts.integer(1, 999),
       address: {
         street: "606-3727 Ullamcorper. Street",
         city: "Roseville NH 11523",
@@ -97,6 +99,7 @@ export const state = {
       ],
     },
   ],
+  darkMode: false,
 };
 export let curAccount;
 export function setCurrentAccount(data) {
@@ -145,4 +148,23 @@ function setLocalStorage() {
     curAccount.username,
     JSON.stringify(curAccount.movements)
   );
+}
+
+export function createNewAccount(data) {
+  const randomNewAccount = new Random();
+  const newAccount = {
+    username: data.username,
+    password: data.password1,
+    fullName: data.fullname,
+    id: randomNewAccount.integer(1, 999),
+    address: {
+      street: data.street,
+      city: data.city,
+    },
+    email: data.email,
+    phone: data.phone,
+    credit: "1000",
+    movements: [],
+  };
+  state.accounts.push(newAccount);
 }

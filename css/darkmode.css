@@ -1,0 +1,86 @@
+.manager-dark {
+  color: #fff;
+  /* background-color: #071e33; */
+  background-color: #343a40;
+}
+
+.body-dark {
+  background-image: linear-gradient(
+    90deg,
+    rgba(17, 70, 120, 1) 31%,
+    rgba(14, 60, 103, 1) 94%
+  );
+}
+/* MAIN NAV DARK MODE STYLES */
+
+.nav-btn-dark:link,
+.nav-btn-dark:visited {
+  color: #fff;
+}
+
+.nav-btn-dark:active,
+.nav-btn-dark:hover {
+  background-color: #666;
+}
+
+/* SEARCH BARK DARK MODE STYLES */
+
+.user-icons-dark {
+  color: #fff;
+}
+
+/* CONTENT DARK MODE STYLES */
+
+.content-title-dark {
+  color: #fff;
+}
+
+.movement-info-dark {
+  background-color: #868e96;
+}
+
+.movement-dark {
+  background-color: #717579;
+}
+
+/* MODAL NEW MOVEMENT DARK MODE STYLES */
+
+.modal-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.modal-dark input,
+.modal-dark select {
+  background-color: #9a9da0;
+}
+
+.modal-dark .modal-icon {
+  color: #fff;
+}
+
+/*LOGIN DARK MODE STYLES */
+
+.login-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.login-dark input {
+  background-color: #9a9da0;
+}
+
+/* CREATE ACCOUNT DARK MODE STYLING */
+
+.create-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.create-dark input {
+  background-color: #9a9da0;
+}
+
+.heading-tertiary-dark {
+  color: #fff;
+}

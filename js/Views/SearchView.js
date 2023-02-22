@@ -1,3 +1,5 @@
+import * as model from "../Model";
+
 class SearchView {
   _parentElement = document.querySelector(".search");
   _data;
@@ -30,10 +32,19 @@ class SearchView {
     />
   </div>
   <div class="user-and-img-box">
-    <a href="#"><ion-icon name="chatbox-ellipses-outline" class="user-icons"></ion-icon>
-  </a>
-    <a href="#"><ion-icon name="notifications-outline" class="user-icons notification"></ion-icon>
+  <a href="#"><ion-icon name="contrast-outline" class="user-icons ${
+    model.state.darkMode && "user-icons-dark"
+  } btn-dark-mode"></ion-icon>
     </a>
+    <a href="#"><ion-icon name="chatbox-ellipses-outline" class="user-icons ${
+      model.state.darkMode && "user-icons-dark"
+    }"></ion-icon>
+  </a>
+    <a href="#"><ion-icon name="notifications-outline" class="user-icons ${
+      model.state.darkMode && "user-icons-dark"
+    } notification"></ion-icon>
+    </a>
+    
     <p class="user-name">${this._data.username}</p>
     <div class="user-img-box">
       <img src=${

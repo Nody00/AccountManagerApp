@@ -5,6 +5,7 @@ import LoginView from "./Views/LoginView";
 import ContentView from "./Views/ContentView";
 import UserInfoView from "./Views/UserInfoView";
 import ChartView from "./Views/ChartView";
+import CreateAccountView from "./Views/CreateAccountView";
 import * as model from "./Model";
 import { Chart } from "chart.js";
 
@@ -46,6 +47,59 @@ function handleFormData(data) {
     e.preventDefault();
     showNewTrModal();
   });
+
+  // Add event listener for dark mode
+  const btnDarkmode = document.querySelector(".btn-dark-mode");
+  btnDarkmode.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleDarkMode();
+  });
+}
+
+// Dark mode toggler function
+function toggleDarkMode() {
+  model.state.darkMode = !model.state.darkMode;
+  console.log(model.state.darkMode);
+  // Manager
+  const manager = document.querySelector(".manager");
+  manager.classList.toggle("manager-dark");
+  // Main nav
+  const navBtns = document.querySelectorAll(".nav-btn");
+  navBtns.forEach((btn) => {
+    btn.classList.toggle("nav-btn-dark");
+  });
+  // Search bar
+  const icons = document.querySelectorAll(".user-icons");
+  icons.forEach((icon) => {
+    icon.classList.toggle("user-icons-dark");
+  });
+  // Content
+  const headings = document.querySelectorAll(".heading-tertiary");
+  headings.forEach((heading) => {
+    heading.classList.toggle("heading-tertiary-dark");
+  });
+  const movementInfo = document.querySelector(".movement-info");
+  movementInfo.classList.toggle("movement-info-dark");
+  const movements = document.querySelectorAll(".movement");
+  movements.forEach((movement) => {
+    movement.classList.toggle("movement-dark");
+  });
+
+  // Modal new movement
+  const modalNew = document.querySelector(".modal");
+  modalNew.classList.toggle("modal-dark");
+
+  // // Login
+  // const login = document.querySelector(".login");
+  // login.classList.toggle("login-dark");
+
+  // // Create
+  // const create = document.querySelector(".create");
+  // create.classList.toggle("create-dark");
+
+  // Body
+  const body = document.querySelector(".body-class");
+  body.classList.toggle("body-dark");
 }
 
 function showNewTrModal() {
@@ -93,6 +147,37 @@ function showNewTrModal() {
   });
 }
 
+// NEW ACCOUNT CREATION
+// Add event listener for new account
+const btnNewAccount = document.querySelector(".btn-create-account");
+btnNewAccount.addEventListener("click", (e) => {
+  e.preventDefault();
+  // Hide the login view
+  LoginView.hideLoginView();
+  // Show new account view
+  CreateAccountView.showCreateView();
+});
+// Go back button
+const btnGoBack = document.querySelector(".btn-back");
+btnGoBack.addEventListener("click", (e) => {
+  e.preventDefault();
+  // Hide new account view
+  CreateAccountView.hideCreateView();
+  // Show login view
+  LoginView.showLoginView();
+});
+
+function handleNewAccount(data) {
+  if (data.password1 !== data.password2) {
+    CreateAccountView.renderError();
+    return;
+  }
+  CreateAccountView.clear();
+  CreateAccountView.hideCreateView();
+  LoginView.showLoginView();
+  model.createNewAccount(data);
+}
+
 function handleLogOut() {
   // Hide everything and show login view
   // Hiding the manager
@@ -126,6 +211,7 @@ function handleContentChange(data) {
 function init() {
   LoginView.addHandlerSubmit(handleFormData);
   NavView.addHandlerNav(handleContentChange);
+  CreateAccountView.addHandlerCreate(handleNewAccount);
 }
 
 init();

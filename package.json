@@ -21,9 +21,15 @@
   },
   "homepage": "https://github.com/Nody00/AccountManagerApp#readme",
   "devDependencies": {
-    "parcel": "^2.8.3"
+    "buffer": "^5.7.1",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0"
   },
   "dependencies": {
-    "chart.js": "^4.2.1"
+    "chart.js": "^4.2.1",
+    "random-js": "^2.1.0"
   }
 }

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="./css/darkmode.css" />
 
     <script
       type="module"
@@ -31,7 +32,7 @@
     <!-- <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <script type="module" src="./js/Controller.js"></script>
   </head>
-  <body>
+  <body class="body-class">
     <div class="container">
       <div class="manager hidden-tx">
         <!-- MAIN NAV -->
@@ -210,7 +211,7 @@
 
     <div class="log-in-container">
       <div class="login">
-        <h3 class="heading-tertiary">Log in:</h3>
+        <h3 class="login-title">Log in:</h3>
         <form action="#" class="log-in-form">
           <label for="username">Username</label>
           <input
@@ -228,6 +229,101 @@
           <button type="submit" class="submit-btn">Log In</button>
           <div class="error-container"></div>
         </form>
+        <a href="#" class="btn-create-account">Create an account</a>
+      </div>
+    </div>
+
+    <div class="create-container hidden-ty">
+      <div class="create">
+        <h3 class="create-title">Create account:</h3>
+        <form action="#" class="create-account-form">
+          <div>
+            <label for="fullname">Full name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+              class="input-fullName"
+              value="John Smith"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="input-email"
+              value="jonhboy@gmail.com"
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              class="input-phone"
+              value="067334222"
+            />
+
+            <label for="city">The city you are in:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              class="input-city"
+              value="Paris"
+            />
+
+            <label for="street">The street you live on:</label>
+            <input
+              type="text"
+              id="street"
+              name="street"
+              required
+              class="input-street"
+              value="James Str."
+            />
+          </div>
+          <div>
+            <label for="new-username">Username:</label>
+            <input
+              type="text"
+              id="new-username"
+              name="username"
+              required
+              class="input-newUsername"
+              value="john1312"
+            />
+
+            <label for="password1">Password:</label>
+            <input
+              type="text"
+              id="password1"
+              name="password1"
+              required
+              class="input-password1"
+              value="password1312"
+            />
+
+            <label for="password2">Repeat the password:</label>
+            <input
+              type="text"
+              id="password2"
+              name="password2"
+              required
+              class="input-password2"
+              value="password1312"
+            />
+            <button type="submit" class="submit-btn margin-sm-top">
+              Create Account
+            </button>
+            <div class="create-error-container"></div>
+          </div>
+        </form>
+        <a href="#" class="btn-back">Go back</a>
       </div>
     </div>
     <!-- <img src="./imgs/user-img-js111.jpg" alt="" />

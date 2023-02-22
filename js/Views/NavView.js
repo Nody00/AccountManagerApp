@@ -1,3 +1,5 @@
+import * as model from "../Model";
+
 class NavView {
   _parentElement = document.querySelector(".main-nav");
 
@@ -10,19 +12,27 @@ class NavView {
     <ul class="nav-list">
       <li>
         <ion-icon name="albums-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn btn-dashboard">Dashboard</a>
+        ><a href="#" class="nav-btn ${
+          model.state.darkMode && "nav-btn-dark"
+        } btn-dashboard">Dashboard</a>
       </li>
       <li>
         <ion-icon name="document-text-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn btn-overview">Overview</a>
+        ><a href="#" class="nav-btn ${
+          model.state.darkMode && "nav-btn-dark"
+        }  btn-overview">Overview</a>
       </li>
       <li>
         <ion-icon name="help-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn btn-info">Information</a>
+        ><a href="#" class="nav-btn ${
+          model.state.darkMode && "nav-btn-dark"
+        } btn-info">Information</a>
       </li>
       <li>
         <ion-icon name="options-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn btn-settings">Settings</a>
+        ><a href="#" class="nav-btn ${
+          model.state.darkMode && "nav-btn-dark"
+        } btn-settings">Settings</a>
       </li>
     </ul>
 </div>

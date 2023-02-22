@@ -1,3 +1,5 @@
+import * as model from "../Model";
+
 class ContentView {
   _parentElement = document.querySelector(".content");
   _data;
@@ -19,7 +21,7 @@ class ContentView {
       const year = mov.date.getFullYear();
 
       html += `
-      <div class="movement">
+      <div class="movement ${model.state.darkMode ? "movement-dark" : ""}">
         <div class="movement-id">${mov.id}</div>
         <div class="movement-date">${day}/${month}/${year}</div>
         <div class="movement-amount">$${mov.amount}</div>
@@ -34,8 +36,12 @@ class ContentView {
 
   _generateMarkup() {
     return `
-    <h3 class="heading-tertiary">Latest transactions</h3>
-    <div class="movement-info">
+    <h3 class="heading-tertiary ${
+      model.state.darkMode ? "heading-tertiary-dark" : ""
+    } content-title">Latest transactions</h3>
+    <div class="movement-info ${
+      model.state.darkMode ? "movement-info-dark" : ""
+    }">
       <p class="info-text">ID</p>
       <p class="info-text">Date</p>
       <p class="info-text">Amount</p>
