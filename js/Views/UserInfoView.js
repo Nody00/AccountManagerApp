@@ -58,6 +58,25 @@ class UserInfoView {
     this._parentElement.innerHTML = "";
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
+
+  _generateMarkupInfo() {
+    return `<div class="user-card">
+    <p class="card-title">Your info</p>
+    <p class="card-name">Dino Krcic</p>
+    <div class="card-text-box"><p class="user-info-type">Education</p><p class="user-id">Bachelors of Applied Computer Engeniring,Universicty of Montenegro</p></div>
+    
+    <div class="card-text-box"><p class="user-info-type">Email:</p><p class="email">dinokrcicprof@gmail.com</p>
+    </div>
+    <div class="card-text-box"><p class="user-info-type">Phone number:</p><p class="phone-number">069-500-144</p>
+    </div>
+  </div>
+  `;
+  }
+  renderInfo() {
+    const markup = this._generateMarkupInfo();
+    this._parentElement.innerHTML = "";
+    this._parentElement.insertAdjacentHTML("afterbegin", markup);
+  }
 }
 
 export default new UserInfoView();

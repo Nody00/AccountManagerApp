@@ -89,14 +89,6 @@ function toggleDarkMode() {
   const modalNew = document.querySelector(".modal");
   modalNew.classList.toggle("modal-dark");
 
-  // // Login
-  // const login = document.querySelector(".login");
-  // login.classList.toggle("login-dark");
-
-  // // Create
-  // const create = document.querySelector(".create");
-  // create.classList.toggle("create-dark");
-
   // Body
   const body = document.querySelector(".body-class");
   body.classList.toggle("body-dark");
@@ -195,15 +187,38 @@ function handleContentChange(data) {
   if (data.classList.contains("btn-overview")) {
     // Hiding the content and user views
     ContentView.hideContentView();
-
+    UserInfoView.render(model.curAccount);
+    const btnNewTr = document.querySelector(".new-btn");
+    btnNewTr.addEventListener("click", (e) => {
+      e.preventDefault();
+      showNewTrModal();
+    });
     // Rendering the overview view
     ChartView.showOverview();
   }
   if (data.classList.contains("btn-dashboard")) {
+    const content = document.querySelector(".content");
+    content.classList.remove("info");
     // Hiding other content
     ChartView.hideOverview();
-
+    UserInfoView.render(model.curAccount);
+    const btnNewTr = document.querySelector(".new-btn");
+    btnNewTr.addEventListener("click", (e) => {
+      e.preventDefault();
+      showNewTrModal();
+    });
     // Rendering the dashboard
+    ContentView.render(model.curAccount);
+    ContentView.showContentView();
+  }
+  if (data.classList.contains("btn-info")) {
+    //  Render the info in the content view maybe...
+    const content = document.querySelector(".content");
+    content.classList.add("info");
+
+    ChartView.hideOverview();
+    UserInfoView.renderInfo();
+    ContentView.renderInfo();
     ContentView.showContentView();
   }
 }

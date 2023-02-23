@@ -28,12 +28,6 @@ class NavView {
           model.state.darkMode && "nav-btn-dark"
         } btn-info">Information</a>
       </li>
-      <li>
-        <ion-icon name="options-outline" class="nav-icon"></ion-icon
-        ><a href="#" class="nav-btn ${
-          model.state.darkMode && "nav-btn-dark"
-        } btn-settings">Settings</a>
-      </li>
     </ul>
 </div>
   <a href="#" class="logout-btn">Log Out</a>`;
