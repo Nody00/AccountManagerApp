@@ -20,10 +20,10 @@ class CreateAccountView {
     });
   }
   hideCreateView() {
-    this._parentElement.classList.add("hidden-ty");
+    this._parentElement.classList.add("hidden-tx");
   }
   showCreateView() {
-    this._parentElement.classList.remove("hidden-ty");
+    this._parentElement.classList.remove("hidden-tx");
   }
   _generateRenderError() {
     return `<div class="error-create">Passwords do not match</div>`;

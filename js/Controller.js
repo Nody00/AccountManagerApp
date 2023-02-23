@@ -105,12 +105,12 @@ function toggleDarkMode() {
 function showNewTrModal() {
   // Show the modal form
   const overlay = document.querySelector(".overlay");
-  overlay.classList.remove("hidden-ty");
+  overlay.classList.remove("hidden-tx");
 
   // Hide modal form on button click
   const btnCloseModal = document.querySelector(".btn-close-modal");
   btnCloseModal.addEventListener("click", () => {
-    overlay.classList.add("hidden-ty");
+    overlay.classList.add("hidden-tx");
   });
 
   // Hide modal on Esc

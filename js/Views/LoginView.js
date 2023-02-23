@@ -13,10 +13,10 @@ class LoginView {
     });
   }
   hideLoginView() {
-    this._parentElement.classList.add("hidden-ty");
+    this._parentElement.classList.add("hidden-tx");
   }
   showLoginView() {
-    this._parentElement.classList.remove("hidden-ty");
+    this._parentElement.classList.remove("hidden-tx");
   }
   _generateRenderError() {
     return `<div class="error-login">Account not found</div>`;

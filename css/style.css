@@ -20,7 +20,7 @@
 
 .main-nav {
   height: 70rem;
-  border-right: 2px solid #eee;
+  /* border-right: 2px solid #eee; */
   grid-row: span 2;
   padding: 2.4rem;
   display: flex;
@@ -172,7 +172,7 @@
 .user-and-img-box a:visited {
   color: #333;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem;
   transition: all 0.2s;
   border-radius: 100px;
 }
@@ -385,8 +385,8 @@
   height: 100vh;
   position: absolute;
   top: 0;
-  transform: translateY(0%);
-  transition: all 0.2s;
+  transform: translateX(0%);
+  transition: all 0.5s;
 }
 
 .modal {
@@ -458,8 +458,9 @@
   height: 100vh;
   position: absolute;
   top: 0;
-  transform: translateY(0%);
+  transform: translateX(0%);
   transition: all 0.5s;
+  position: absolute;
 }
 
 .login {
