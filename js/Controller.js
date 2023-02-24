@@ -78,12 +78,12 @@ function toggleDarkMode() {
   headings.forEach((heading) => {
     heading.classList.toggle("heading-tertiary-dark");
   });
-  const movementInfo = document.querySelector(".movement-info");
-  movementInfo.classList.toggle("movement-info-dark");
-  const movements = document.querySelectorAll(".movement");
-  movements.forEach((movement) => {
-    movement.classList.toggle("movement-dark");
-  });
+  const content = document.querySelector(".content");
+  content.classList.toggle("content-dark");
+  // const movements = document.querySelectorAll(".movement");
+  // movements.forEach((movement) => {
+  //   movement.classList.toggle("movement-dark");
+  // });
 
   // Modal new movement
   const modalNew = document.querySelector(".modal");
@@ -91,6 +91,7 @@ function toggleDarkMode() {
 
   // Body
   const body = document.querySelector(".body-class");
+  console.log(body);
   body.classList.toggle("body-dark");
 }
 

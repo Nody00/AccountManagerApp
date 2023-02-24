@@ -32,16 +32,21 @@
 
 /* CONTENT DARK MODE STYLES */
 
-.content-title-dark {
+.content-dark .content-title {
   color: #fff;
 }
 
-.movement-info-dark {
+.content-dark .movement-info {
   background-color: #868e96;
 }
 
-.movement-dark {
+.content-dark .movement {
   background-color: #717579;
+}
+
+.content-dark .movement:hover {
+  background-color: #ddd;
+  cursor: pointer;
 }
 
 /* MODAL NEW MOVEMENT DARK MODE STYLES */
